@@ -2,7 +2,6 @@ let buttonDiv = document.getElementById("buttonDiv");
 let inputDiv = document.getElementById("inputDiv");
 
 function handleButtonClick(event) {
-
   let br1 = document.createElement("br");
   let br2 = document.createElement("br");
   inputDiv.appendChild(br1);
