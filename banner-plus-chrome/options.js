@@ -1,3 +1,8 @@
+//import Swal from 'sweetalert2'
+
+// CommonJS
+//const Swal = require('sweetalert2')
+
 let buttonDiv = document.getElementById("buttonDiv");
 let inputDiv = document.getElementById("inputDiv");
 const checkboxNames = ["switchToEnterCRNsTabCheckBox", "addToSummaryCheckBox", "submitCheckBox", "conditionalAddAndDropCheckBox"]
@@ -12,14 +17,16 @@ function handleAddCRNButtonClick(event) {
 
 function handleSaveButtonClick(event) {
   console.log("Saving CRNs")
-  alert("CRNs Saved")
+
 
   const CRNs = [];
+  let alertText = " CRN(s) Saved:\n"
 
   try {
     for (i = 0; i < 99; i++) {
       if (document.getElementsByClassName('input')[i].value.length > 0) {
         CRNs.push(document.getElementsByClassName('input')[i].value)
+        alertText += document.getElementsByClassName('input')[i].value + "\n"
       }
     }
   } catch (error) {
@@ -27,6 +34,17 @@ function handleSaveButtonClick(event) {
   }
 
   chrome.storage.sync.set({ CRNs });
+
+  alertText = CRNs.length + alertText
+
+  //alert(alertText)
+  Swal.fire({
+    //position: 'top-end',
+    icon: 'success',
+    title: "CRNs Saved",
+    showConfirmButton: false,
+    timer: 1500
+  })
 }
 
 function insertBreaks(div, numBreaks) {
