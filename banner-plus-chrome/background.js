@@ -3,7 +3,7 @@ var preferences = {};
 
 chrome.runtime.onInstalled.addListener(() => {
   preferences["switchToEnterCRNsTabCheckBox"] = false;
-  preferences["addToSummaryCheckBox"] = true;
+  preferences["addToSummaryCheckBox"] = false;
   preferences["submitCheckBox"] = false;
   preferences["conditionalAddAndDropCheckBox"] = false;
 
