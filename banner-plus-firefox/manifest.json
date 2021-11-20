@@ -2,12 +2,18 @@
   "name": "Banner+",
   "description": "W&M Banner registration tool.",
   "version": "1.0",
-  "manifest_version": 3,
-  "permissions": ["scripting", "storage", "activeTab"],
+  "manifest_version": 2,
+  "permissions": ["storage", "activeTab", "tabs"],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
-  "action": {
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "michaelrfosterdev@gmail.com",
+      "strict_min_version": "55.0"
+    }
+  },
+  "browser_action": {
     "default_title": "Click to add classes",
     "default_icon": {
       "16": "/images/icon-16-transparent.png",
@@ -22,5 +28,8 @@
     "48": "/images/icon-48-transparent.png",
     "128": "/images/icon-128-transparent.png"
   },
-  "options_page": "options.html"
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab":true
+  }
 }
