@@ -3,7 +3,7 @@
   "description": "W&M Banner registration tool.",
   "version": "1.0",
   "manifest_version": 2,
-  "permissions": ["storage", "activeTab", "tabs"],
+  "permissions": ["storage", "activeTab", "tabs", "contextMenus"],
   "background": {
     "scripts": ["background.js"]
   },
