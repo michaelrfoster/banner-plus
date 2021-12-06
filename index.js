@@ -22,6 +22,8 @@ function constructPage() {
   insertBreaks(inputDiv, 2)
   numInputs++;
 
+
+
   let addCRNButton = document.createElement("button");
   addCRNButton.setAttribute('class', 'btn');
   addCRNButton.setAttribute('id', 'addAnotherCRN' )
@@ -29,7 +31,9 @@ function constructPage() {
   addCRNButton.addEventListener("click", handleAddCRNButtonClick);
   buttonDiv.appendChild(addCRNButton);
 
+  /*
   //font-size:0px;
+
   let enterCRNsTab = document.createElement("button");
   enterCRNsTab.setAttribute('class', 'btn');
   enterCRNsTab.setAttribute('id', 'enterCRNs-tab' )
@@ -39,12 +43,13 @@ function constructPage() {
   enterCRNsTab.addEventListener("click", handleEnterCRNsTabClick);
   preferencesDiv.appendChild(enterCRNsTab);
 
+
   var x = document.getElementById("enterCRNsTabText");
   x.style.display = "none";
 
   var y = document.getElementById("addCRNbutton");
   y.style.display = "none";
-
+  */
 }
 
 function handleEnterCRNsTabClick(event) {
