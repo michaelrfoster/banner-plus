@@ -1,6 +1,6 @@
 let buttonDiv = document.getElementById("buttonDiv");
 let inputDiv = document.getElementById("inputDiv");
-let preferencesDiv = document.getElementById("preferencesDiv");
+//let preferencesDiv = document.getElementById("preferencesDiv");
 let numInputs = 0;
 
 function handleAddCRNButtonClick(event) {
@@ -21,8 +21,6 @@ function constructPage() {
   inputDiv.appendChild(input);
   insertBreaks(inputDiv, 2)
   numInputs++;
-
-
 
   let addCRNButton = document.createElement("button");
   addCRNButton.setAttribute('class', 'btn');
