@@ -62,4 +62,9 @@ function insertBreaks(div, numBreaks) {
   }
 }
 
+function toggleCheckbox(element)
+ {
+   element.checked = true;
+ }
+
 constructPage()
